@@ -85,6 +85,14 @@ MockLLM调整了优先级，优先识别 research , study , deeply 等关键词�
 
 接口规范 ：所有工具继承自 BaseTool ( tools/base.py )，必须实现 run(query) -> str 方法，并提供 name 和 description 。
 
+tools/mcp_client.py：通过 MCP 协议实现了连接外部 Server 获取能力。这是通过 MCPTool 包装器实现的，它将外部 MCP Server 的能力“伪装”成本地工具。
+
+tools/registry.py：项目使用 ToolRegistry 来统一管理所有工具，无论是本地实现的还是通过 MCP 加载的。
+
+- 提供了 register(tool) 方法来注册实例。
+- 提供了 @register_tool 装饰器用于自动注册。
+- MCPManager 会自动发现外部 Server 的工具并批量注册到系统中。
+
 ### 工程方面
 
 #### LLM 管理
