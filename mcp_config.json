@@ -1,0 +1,31 @@
+{
+  "mcp_servers": [
+    {
+      "name": "filesystem",
+      "type": "stdio",
+      "command": "mcp-server-filesystem",
+      "args": ["./data"],
+      "description": "文件系统访问 - 允许 Agent 读取和操作本地文件"
+    },
+    {
+      "name": "github",
+      "type": "stdio",
+      "command": "mcp-server-github",
+      "env": {
+        "GITHUB_TOKEN": "your_github_token_here"
+      },
+      "description": "GitHub API - 允许 Agent 访问 GitHub 仓库、Issues、PR 等"
+    },
+    {
+      "name": "brave_search",
+      "type": "stdio",
+      "command": "mcp-server-brave-search",
+      "env": {
+        "BRAVE_API_KEY": "your_brave_api_key_here"
+      },
+      "description": "Brave 搜索 - 提供网络搜索能力"
+    }
+  ],
+  "readme": "这是 MCP 服务器配置文件。要使用 MCP 功能，请先安装相应的 MCP 服务器。访问 https://modelcontextprotocol.io/ 了解更多信息。"
+}
+

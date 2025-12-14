@@ -1,0 +1,6 @@
+In artificial intelligence, an intelligent agent (IA) is an entity that perceives its environment, takes actions autonomously in order to achieve goals, and may improve its performance with learning or may use knowledge.
+They may be simple or complex. A thermostat is considered an example of an intelligent agent.
+Intelligent agents are often described schematically as an abstract functional system similar to a computer program.
+Key characteristics of agents include autonomy, reactivity, pro-activeness, and social ability.
+Conversational agents, or chatbots, are a specific type of agent designed to interact with humans via natural language.
+ReAct (Reason + Act) is a popular pattern for building agents that can use tools.
